@@ -10,3 +10,10 @@ JOIN movies_directors
 JOIN directors 
     ON directors.id = movies_directors.director_id
 LIMIT 50;
+
+
+SELECT actors.first_name, roles.role, movies.name movie_name
+FROM actors
+JOIN roles ON roles.actor_id = actors.id
+JOIN movies ON roles.movie_id = movies.id
+LIMIT 50;
